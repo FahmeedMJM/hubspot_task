@@ -1,1 +1,54 @@
+Description of the Code and Functionalities
+
+This Python script uses the HubSpot API to fetch and display information about tickets and emails from a HubSpot account.
+The script is structured to make HTTP GET requests to the HubSpot API, handle potential errors, parse the JSON responses, and display the relevant information in a readable format.
+
+1.Importing the Modules
+The requests module is used for making HTTP requests, and the json module is used for parsing JSON data.
+
+2.Setting Headers
+The headers include the authorization token required to authenticate with the HubSpot API.
+
+3.Fetching Tickets
+This function(fetch_tickets) makes a GET request to the HubSpot API to fetch ticket data. It handles HTTP errors and returns the raw JSON response as a string.
+
+4. Fetching Emails
+This function(fetch_email) makes a GET request to the HubSpot API to fetch email data. It similarly handles HTTP errors and returns the raw JSON response as a string.
+
+
+5.Parsing and Displaying Tickets
+This function(parse_and_display_tickets) parses the JSON string into a dictionary, iterates through the tickets, and prints their details.
+
+6.Parsing and Displaying Emails
+This function(parse_and_display_emails) parses the JSON string into a dictionary, iterates through the emails, and prints their details.
+
+7.Executing the Functions:
+This part of the script calls the functions to fetch tickets and emails, then parses and displays the results.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
