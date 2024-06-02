@@ -11,7 +11,7 @@ def fetch_tickets(headers):
     url = 'https://api.hubapi.com/crm/v3/objects/tickets?associations=emails'
     try:
         response = requests.get(url, headers=headers)
-        response.raise_for_status()  # Raise an HTTPError for bad responses (4xx and 5xx)
+        response.raise_for_status()  # Raise an HTTPError for bad responses 
         return response.text  # Return the parsed JSON response
     except requests.exceptions.HTTPError as http_err:
         print(f"HTTP error occurred: {http_err}")  # Output any HTTP errors
@@ -22,7 +22,7 @@ def fetch_email(headers):
     url = 'https://api.hubapi.com/crm/v3/objects/email'
     try:
         response = requests.get(url, headers=headers)
-        response.raise_for_status()  # Raise an HTTPError for bad responses (4xx and 5xx)
+        response.raise_for_status()  # Raise an HTTPError for bad responses
         return response.text  # Return the parsed JSON response
     except requests.exceptions.HTTPError as http_err:
         print(f"HTTP error occurred: {http_err}")  # Output any HTTP errors
@@ -57,7 +57,7 @@ def parse_and_display_emails(email_json):
     # Parse the JSON string into a dictionary
     emails = json.loads(email_json)
     
-    # Check if the 'results' key is in the tickets dictionary
+    # Check if the 'results' key is in the emails dictionary
     if 'results' in emails:
         for email in emails['results']:
             # Extract email properties
